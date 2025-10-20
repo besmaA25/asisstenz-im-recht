@@ -1,0 +1,71 @@
+/*
+Website für "Assistenz im Recht" – Dienstleistungen für Kanzleien
+Stil: Seriös, freundlich, modern, responsiv
+Technologie: React + TailwindCSS
+*/
+
+import React from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+
+export default function App() {
+return (
+<div className="min-h-screen bg-gray-50 text-slate-900">
+{/* Header */}
+<header className="bg-white shadow-sm sticky top-0 z-40">
+<div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+<div className="text-xl font-bold text-indigo-700">Assistenz im Recht</div>
+<nav className="hidden md:flex gap-6 text-sm">
+<a href="#about" className="hover:underline">Über mich</a>
+<a href="#services" className="hover:underline">Leistungen</a>
+<a href="#pricing" className="hover:underline">Preise</a>
+<a href="#contact" className="hover:underline">Kontakt</a>
+</nav>
+</div>
+</header>
+
+{/* Hero Section */}
+<section className="py-20 bg-gradient-to-br from-indigo-50 to-white text-center">
+<motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+<h1 className="text-4xl font-extrabold text-indigo-800">Assistenz im Recht</h1>
+<p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+Professionelle Unterstützung für Ihre Kanzlei – digital deutschlandweit oder vor Ort in Berlin & Niedersachsen.
+</p>
+<div className="mt-8 flex justify-center gap-4">
+<a href="#contact"><Button>Kontakt aufnehmen</Button></a>
+<a href="#about" className="px-4 py-2 rounded-md border border-indigo-200 text-indigo-700">Mehr erfahren</a>
+</div>
+</motion.div>
+</section>
+
+{/* Über mich */}
+<section id="about" className="py-16 bg-white">
+<div className="max-w-4xl mx-auto px-6">
+<h2 className="text-2xl font-bold text-indigo-800 mb-4">Über mich</h2>
+<p className="text-slate-700 leading-relaxed">
+Ich bin ausgebildete <strong>Rechtsanwaltsfachangestellte (RENO)</strong> mit langjähriger Erfahrung in verschiedenen Kanzleien.
+Ich kenne die Abläufe und Herausforderungen des Kanzleialltags genau und unterstütze Rechtsanwältinnen und Rechtsanwälte
+mit Organisationstalent, Diskretion und Zuverlässigkeit – digital oder vor Ort.
+</p>
+</div>
+</section>
+
+{/* Leistungen */}
+<section id="services" className="py-16 bg-gray-50">
+<div className="max-w-6xl mx-auto px-6">
+<h2 className="text-2xl font-bold text-indigo-800 mb-6">Meine Leistungen</h2>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<Card><CardContent><h3 className="font-semibold text-lg">Fristenkontrolle</h3><p className="text-sm text-slate-600 mt-2">Zuverlässige Überwachung und Verwaltung Ihrer Fristen.</p></CardContent></Card>
+<Card><CardContent><h3 className="font-semibold text-lg">Schriftsätze</h3><p className="text-sm text-slate-600 mt-2">Erstellung und Formatierung nach Diktat oder Vorlage.</p></CardContent></Card>
+<Card><CardContent><h3 className="font-semibold text-lg">Terminverwaltung</h3><p className="text-sm text-slate-600 mt-2">Organisation und Pflege des Kanzleikalenders.</p></CardContent></Card>
+<Card><CardContent><h3 className="font-semibold text-lg">Telefondienst</h3><p className="text-sm text-slate-600 mt-2">Professioneller und freundlicher Kontakt mit Mandanten.</p></CardContent></Card>
+</div>
+<p className="mt-8 text-slate-600">💻 <strong>Digital</strong> deutschlandweit &nbsp;&nbsp; 🏢 <strong>Vor Ort</strong> in Berlin und Niedersachsen</p>
+</div>
+</section>
+
+{/* Preise */}
+<section id="pricing" className="py-16 bg-white">
+<div className="max-w-4xl mx-auto px-6 text-center">
+}
