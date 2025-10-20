@@ -1,0 +1,82 @@
+import React from "react";
+
+{/* Über mich */}
+<section id="about" className="py-16 bg-white">
+<div className="max-w-4xl mx-auto px-6">
+<h2 className="text-2xl font-bold text-indigo-800 mb-4">Über mich</h2>
+<p className="text-slate-700 leading-relaxed">
+Ich bin ausgebildete <strong>Rechtsanwaltsfachangestellte (RENO)</strong> mit langjähriger Erfahrung in verschiedenen Kanzleien.
+Ich kenne die Abläufe und Herausforderungen des Kanzleialltags genau und unterstütze Rechtsanwältinnen und Rechtsanwälte
+mit Organisationstalent, Diskretion und Zuverlässigkeit – digital oder vor Ort.
+</p>
+</div>
+</section>
+
+{/* Leistungen */}
+<section id="services" className="py-16 bg-gray-50">
+<div className="max-w-6xl mx-auto px-6">
+<h2 className="text-2xl font-bold text-indigo-800 mb-6">Meine Leistungen</h2>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<Card><CardContent><h3 className="font-semibold text-lg">Fristenkontrolle</h3><p className="text-sm text-slate-600 mt-2">Zuverlässige Überwachung und Verwaltung Ihrer Fristen.</p></CardContent></Card>
+<Card><CardContent><h3 className="font-semibold text-lg">Schriftsätze</h3><p className="text-sm text-slate-600 mt-2">Erstellung und Formatierung nach Diktat oder Vorlage.</p></CardContent></Card>
+<Card><CardContent><h3 className="font-semibold text-lg">Terminverwaltung</h3><p className="text-sm text-slate-600 mt-2">Organisation und Pflege des Kanzleikalenders.</p></CardContent></Card>
+<Card><CardContent><h3 className="font-semibold text-lg">Telefondienst</h3><p className="text-sm text-slate-600 mt-2">Professioneller und freundlicher Kontakt mit Mandanten.</p></CardContent></Card>
+</div>
+<p className="mt-8 text-slate-600">💻 <strong>Digital</strong> deutschlandweit &nbsp;&nbsp; 🏢 <strong>Vor Ort</strong> in Berlin und Niedersachsen</p>
+</div>
+</section>
+
+{/* Preise */}
+<section id="pricing" className="py-16 bg-white">
+<div className="max-w-4xl mx-auto px-6 text-center">
+<h2 className="text-2xl font-bold text-indigo-800 mb-4">Preise & Zahlung</h2>
+<p className="text-slate-600 mb-8">Transparente und faire Abrechnung – auf Wunsch stundenweise oder pauschal.</p>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+<Card className="p-6"><CardContent><h3 className="text-lg font-semibold">Stundenweise</h3><p className="text-3xl font-bold mt-3">ab 30 €</p><p className="text-sm text-slate-600 mt-2">Flexible Unterstützung nach Bedarf.</p></CardContent></Card>
+<Card className="p-6 shadow-md border-indigo-100"><CardContent><h3 className="text-lg font-semibold">Monatlich</h3><p className="text-3xl font-bold mt-3">ab 250 €</p><p className="text-sm text-slate-600 mt-2">Regelmäßige Betreuung Ihrer Kanzlei.</p></CardContent></Card>
+<Card className="p-6"><CardContent><h3 className="text-lg font-semibold">Individuell</h3><p className="text-3xl font-bold mt-3">auf Anfrage</p><p className="text-sm text-slate-600 mt-2">Ich erstelle gerne ein persönliches Angebot.</p></CardContent></Card>
+</div>
+<div className="mt-8"><Button>Jetzt anfragen</Button></div>
+</div>
+</section>
+
+{/* Kontakt */}
+<section id="contact" className="py-16 bg-gray-50">
+<div className="max-w-4xl mx-auto px-6">
+<h2 className="text-2xl font-bold text-indigo-800 mb-4">Kontakt</h2>
+<p className="text-slate-600 mb-8">Ich freue mich auf Ihre Anfrage! Schreiben Sie mir eine Nachricht oder kontaktieren Sie mich direkt.</p>
+<form className="space-y-4 bg-white p-6 rounded-lg shadow-sm" onSubmit={(e)=>{e.preventDefault(); alert('Nachricht gesendet (Demo).');}}>
+<label className="block">
+<span className="text-sm font-medium">Name</span>
+<input required className="mt-1 block w-full rounded-md border border-slate-200 p-2" placeholder="Ihr Name" />
+</label>
+<label className="block">
+<span className="text-sm font-medium">E-Mail</span>
+<input type="email" required className="mt-1 block w-full rounded-md border border-slate-200 p-2" placeholder="kanzlei@beispiel.de" />
+</label>
+<label className="block">
+<span className="text-sm font-medium">Nachricht</span>
+<textarea required rows={4} className="mt-1 block w-full rounded-md border border-slate-200 p-2" placeholder="Ihre Nachricht" />
+</label>
+<div className="flex justify-end"><Button type="submit">Senden</Button></div>
+</form>
+<div className="mt-8 text-sm text-slate-600">
+📧 kontakt@assistenzimrecht.de <br />
+📍 Berlin & Niedersachsen – digital deutschlandweit
+</div>
+</div>
+</section>
+
+{/* Footer */}
+<footer className="border-t bg-white py-6 mt-12">
+<div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-sm text-slate-600 gap-4">
+<div>© {new Date().getFullYear()} Assistenz im Recht – Alle Rechte vorbehalten</div>
+<div className="flex gap-4">
+<a href="#impressum" className="underline">Impressum</a>
+<a href="#datenschutz" className="underline">Datenschutz</a>
+</div>
+</div>
+</footer>
+</div>
+);
+}
